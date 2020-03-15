@@ -1,0 +1,48 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://www.solidbackgrounds.com/download/2560x1440-blue-stained-glass-free-website-background-image.jpg")
+}
+
+header {   
+    color:white;
+    float:right;
+    margin-top: 3%;
+    margin-right: 31%;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: grey;
+    border-radius: 7px;
+}
+
+#score {
+    color:white;
+    background-color: grey;
+    float: left;
+    margin-top: 14%;
+    margin-left:13%;
+    padding-bottom: 25%;
+    width:20%;
+    text-align: center;
+    border-radius: 7px;
+}
+
+form {
+    float: right;
+    background-color: grey;
+    text-align: center;
+    color:white;
+    border-radius: 7px;
+    margin-top: 3%;
+    margin-right: 20%;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    padding-left: 30%;
+}
+
+
+
+
