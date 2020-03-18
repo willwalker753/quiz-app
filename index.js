@@ -80,10 +80,11 @@ function nextQuestion() {
             $('#question').empty();
             $('#correct').empty();
             $('#incorrect').empty();
+            $('#submit').empty();
             $('#correct').append(`<h3>${correct}</h3>`);
-            $('#incorrect').append(`<h3>${incorrect}</h3>`);
-            $('#submit').append('<button type="button" id="submit" onclick="">Submit</button>');
+            $('#incorrect').append(`<h3>${incorrect}</h3>`);     
             $('#question').append('<h3>2 out of 5<br> <br>What is the square root of 2?</h3><ul><li><input type="radio" name="q" value="6" /> .6 <br><br></li><li><input type="radio" name="q" value="1" /> 1 <br><br></li><li><input type="radio" name="q" value="14" /> 1.4 <br><br></li><li><input type="radio" name="q" value="18" /> 1.8 <br><br></li></ul>');
+            addSubmit();
         }
         if(questionNum==2){
             $('#message').empty();
@@ -91,32 +92,35 @@ function nextQuestion() {
             $('#question').empty();
             $('#correct').empty();
             $('#incorrect').empty();
+            $('#submit').empty();
             $('#correct').append(`<h3>${correct}</h3>`);
             $('#incorrect').append(`<h3>${incorrect}</h3>`);
-            $('#submit').append('<button type="button" id="submit" onclick="">Submit</button>');
             $('#question').append('<h3>3 out of 5<br> <br>What is 3% of 110?</h3><ul><li><input type="radio" name="q" value="3" /> 3 <br><br></li><li><input type="radio" name="q" value="33" /> 3.3 <br><br></li><li><input type="radio" name="q" value="36" /> 3.6 <br><br></li><li><input type="radio" name="q" value="27" /> 2.7 <br><br></li></ul>');
-                                            }
+            addSubmit();
+        }
         if(questionNum==3){
             $('#message').empty();
             $('#next').empty();
             $('#question').empty();
             $('#correct').empty();
             $('#incorrect').empty();
+            $('#submit').empty();
             $('#correct').append(`<h3>${correct}</h3>`);
             $('#incorrect').append(`<h3>${incorrect}</h3>`);
-            $('#submit').append('<button type="button" id="submit" onclick="">Submit</button>');
             $('#question').append('<h3>4 out of 5<br> <br>What word looks the same when backwards and upside down?</h3><ul><li><input type="radio" name="q" value="ra" /> RACECAR <br><br></li><li><input type="radio" name="q" value="ka" /> KAYAK <br><br></li><li><input type="radio" name="q" value="sw" /> SWIMS <br><br></li><li><input type="radio" name="q" value="re" /> REDDER <br><br></li></ul>');
-                                            }
+            addSubmit();
+        }
         if(questionNum==4){
             $('#message').empty();
             $('#next').empty();
             $('#question').empty();
             $('#correct').empty();
             $('#incorrect').empty();
+            $('#submit').empty();
             $('#correct').append(`<h3>${correct}</h3>`);
             $('#incorrect').append(`<h3>${incorrect}</h3>`);
-            $('#submit').append('<button type="button" id="submit" onclick="">Submit</button>');
             $('#question').append('<h3>5 out of 5<br> <br>The day before four days after the day that is two days after the day that is tomorrow is when. Tomorrow is saturday so when is when?</h3><ul><li><input type="radio" name="q" value="we" /> Wednesday <br><br></li><li><input type="radio" name="q" value="th" /> Thursday <br><br></li><li><input type="radio" name="q" value="fr" /> Friday <br><br></li><li><input type="radio" name="q" value="tu" /> Tuesday <br><br></li></ul>');
+            addSubmit();
         }
         if(questionNum==5){
             $('#message').empty();
@@ -132,13 +136,20 @@ function nextQuestion() {
 
         questionNum++;
     });
+}
 
+function addSubmit(){
+    $('li').click(function submit() {
+        $('#submit').empty();
+        $('#submit').append('<button type="button" id="submit" onclick="">Submit</button>');
+    });
 }
 
 function runQuiz() {
     checkAnswer();
     score();
     nextQuestion();
+    addSubmit();
 }
 
 $(runQuiz);
