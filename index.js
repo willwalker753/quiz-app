@@ -28,7 +28,6 @@ function checkAnswer() {
                 break;
             case 5:
                 $('#next').append('<button type="button" id="next">Next</button>');
-                //$('#next').append('<a href="results.html"><button type="button" id="next">Next</button></a>');
                 break;
         }
     });
@@ -124,7 +123,7 @@ function nextQuestion() {
             $('#next').empty();
             $('#score').remove();
             $('#question').empty();
-            $('#question').append(`<h3>You got ${correct} out of 5 correct</h3>`);
+            $('#question').append(`<h2>You got ${correct} out of 5 correct</h2>`);
             $('#next').append('<button id="retake" >Retake</button>');
             document.getElementById("retake").onclick = function () {
                 location.href = "index.html";
