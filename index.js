@@ -5,7 +5,7 @@ function checkAnswer() {
     $('#submit').click(function check(event) {
         var choice = $("input[name='q']:checked").val();
         $('#submit').empty();
-        console.log(choice);
+        
         if ((choice == 312)||(choice == 14)||(choice == 33)||(choice == 'sw')||(choice == 'th')) {
             score(true);
         }
@@ -22,7 +22,7 @@ function checkAnswer() {
 function score(boolean) {
     if (boolean == true) {
         correct++;
-        console.log(correct,incorrect);
+        
         $('#correct').empty();
         $('#incorrect').empty();
         $('#correct').append(`<h3>${correct}</h3>`);
@@ -30,7 +30,7 @@ function score(boolean) {
     }
     if (boolean == false) {
         incorrect++;
-        console.log(correct,incorrect);
+        
         $('#correct').empty();
         $('#incorrect').empty();
         $('#correct').append(`<h3>${correct}</h3>`);
