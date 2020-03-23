@@ -2,7 +2,7 @@ let correct = 0;
 let incorrect = 0;
 let questionNum = 1;
 function checkAnswer() {
-    $('#submit').click(function check(event) {
+    $('#submit').click((event)=> {
         var choice = $("input[name='q']:checked").val();
         $('#submit').empty();
         
